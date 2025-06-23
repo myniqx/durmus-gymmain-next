@@ -5,7 +5,7 @@ const BASE_URL =
 
 export const fetchImages = async (category, limit) => {
   try {
-    const response = await axios.get(`${BASE_URL}/api/images`, {
+    const response = await axios.get(`/api/images`, {
       params: { category, limit },
     });
 

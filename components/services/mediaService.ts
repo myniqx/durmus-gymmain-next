@@ -7,7 +7,7 @@ export const fetchImages = async (category: CategoryType, limit?: number): Promi
     const params = new URLSearchParams({ category })
     if (limit) params.append("limit", limit.toString())
 
-    const response = await fetch(`${BASE_URL}/api/images?${params}`)
+    const response = await fetch(`/api/images?${params}`)
 
     if (!response.ok) {
       throw new Error("Failed to fetch images")

@@ -48,7 +48,7 @@ const Contact = () => {
     }
 
     try {
-      const response = await fetch(`${BASE_URL}/api/messages/contact`, {
+      const response = await fetch(`/api/messages/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

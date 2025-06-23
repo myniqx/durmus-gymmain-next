@@ -32,7 +32,7 @@ const SignupSection = ({ translations }) => {
     }
   
     try {
-      const { success, data } = await postData(`${BASE_URL}/api/messages/signup`, formData);
+      const { success, data } = await postData(`/api/messages/signup`, formData);
   
       if (success) {
         setResponseMessage(data.message);

@@ -24,6 +24,7 @@ const categoryMap: Record<string, CategoryType> = {
 }
 
 export const fetchAndStoreImages = async (): Promise<void> => {
+  if (isReady) return
   try {
     if (!PEXELS_API_KEY) {
       console.error("Pexels API key not found!")
@@ -57,8 +58,6 @@ export const fetchAndStoreImages = async (): Promise<void> => {
     console.error("Error fetching and storing images:", error)
   }
 }
-
-export const isImageDataReady = (): boolean => isReady
 
 export const getImagesFromDB = async () => {
   try {

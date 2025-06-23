@@ -1,10 +1,9 @@
 import { NextResponse } from "next/server"
 import { getImagesFromDB, isImageDataReady } from "@/lib/services/imageService"
+import { fetchAndStoreImages } from "@/lib/imageService"
 
 export async function GET() {
-  if (!isImageDataReady()) {
-    return NextResponse.json({ message: "Images are still being fetched, please try again later." }, { status: 503 })
-  }
+  await fetchAndStoreImages()
 
   try {
     const images = await getImagesFromDB()

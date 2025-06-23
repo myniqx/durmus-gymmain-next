@@ -15,7 +15,7 @@ const useTranslation = (pageKey) => {
       setIsLoading(true); // Start loading when the fetch is triggered
 
       try {
-        const data = await fetchLanguage(selectedLang); // Fetch data based on the selected language
+        const data = null // await fetchLanguage(selectedLang); // Fetch data based on the selected language
        // console.log("Fetched language data:", data); // Log to check the structure
 
         // Check if the pageKey exists in the response and set the appropriate translations

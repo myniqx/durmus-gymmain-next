@@ -9,7 +9,7 @@ interface LanguageRouteProps {
 
 export async function GET(request: NextRequest, { params }: LanguageRouteProps) {
   try {
-    const translations = await fetchLanguage(await params.code)
+    const translations = await fetchLanguage((await params).code)
 
     if (!translations || Object.keys(translations).length === 0) {
       return NextResponse.json({ message: "Language not found" }, { status: 404 })

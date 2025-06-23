@@ -1,6 +1,7 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { getImageByCategory, isImageDataReady } from "@/lib/services/imageService"
 import type { CategoryType } from "@/types"
+import { getImages } from "@/lib/imageService"
 
 const validCategories: CategoryType[] = [
   "pilates",
@@ -17,10 +18,6 @@ const validCategories: CategoryType[] = [
 
 export async function GET(request: NextRequest) {
   try {
-    if (!isImageDataReady()) {
-      return NextResponse.json({ error: "Images are still being prepared. Try again shortly." }, { status: 503 })
-    }
-
     const { searchParams } = new URL(request.url)
     const category = searchParams.get("category")
 

@@ -13,7 +13,7 @@ i18n
       tr: { translation: tr },
       nl: { translation: nl },
     },
-    lng: localStorage.getItem("selectedLang") || "en", // Load last used language
+    lng: /* localStorage.getItem("selectedLang") || */ "en", // Load last used language
     fallbackLng: "en",
     interpolation: { escapeValue: false },
   });
