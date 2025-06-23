@@ -1,9 +1,7 @@
+import { getImagesFromDB } from "@/lib/services/imageService"
 import { NextResponse } from "next/server"
-import { getImagesFromDB, isImageDataReady } from "@/lib/services/imageService"
-import { fetchAndStoreImages } from "@/lib/imageService"
 
 export async function GET() {
-  await fetchAndStoreImages()
 
   try {
     const images = await getImagesFromDB()
