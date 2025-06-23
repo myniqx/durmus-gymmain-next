@@ -1,9 +1,9 @@
 'use client'
 import React from "react";
-import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../styles/PurchasePage.css";
 import { FaCcVisa, FaCcMastercard, FaCcAmex } from "react-icons/fa";
+import { useParams } from "next/navigation";
 const plans = {
   "12months": {
     key: "planAnnual",
@@ -16,7 +16,7 @@ const plans = {
   }
 };
 
-const PurchasePage = () => {
+export const PurchasePage = () => {
   const { option } = useParams();
   const { t } = useTranslation();
 

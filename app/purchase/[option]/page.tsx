@@ -1,4 +1,4 @@
-import PurchasePage from "@/client/pages/PurchasePage"
+import PurchasePage from "@/client/src/pages/PurchasePage";
 
 interface PurchasePageProps {
   params: {
@@ -7,5 +7,5 @@ interface PurchasePageProps {
 }
 
 export default function Purchase({ params }: PurchasePageProps) {
-  return <PurchasePage option={params.option} />
+  return <PurchasePage />
 }
