@@ -59,47 +59,6 @@ export const getImages = async (): Promise<any[] | undefined> => {
   }
 }
 
-export const fetchAndStoreImages = async (): Promise<void> => {
-  try {
-    if (!PEXELS_API_KEY) {
-      console.error("Pexels API key not found!")
-      return
-    }
-
-    await connectDB()
-    await Image.deleteMany({})
-
-    for (const [pexelsQuery, appCategory] of Object.entries(categoryMap)) {
-      const response = await axios.get(PEXELS_API_URL, {
-        headers: { Authorization: PEXELS_API_KEY },
-        params: {
-          query: pexelsQuery,
-          per_page: PER_PAGE,
-          page: PAGE,
-        },
-      })
-
-      const images = response.data.photos.map((img: any) => ({
-        ...img,
-        category: appCategory,
-      }))
-
-      await Image.insertMany(images)
-    }
-
-    console.log("Images saved to DB with categories.")
-    isReady = true
-  } catch (error) {
-    console.error("Error fetching and storing images:", error)
-  }
-}
-
-export const isImageDataReady = async (): Promise<boolean> => {
-  if (!isReady) {
-    await fetchAndStoreImages()
-  }
-  return isReady
-}
 
 export const getImagesFromDB = async () => {
   try {

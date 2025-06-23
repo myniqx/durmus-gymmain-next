@@ -2,6 +2,7 @@ import axios from "axios"
 import Image from "@/lib/models/Image"
 import connectDB from "@/lib/mongodb"
 import type { CategoryType } from "@/types"
+import imageList from "@/constants/images.json"
 
 const PEXELS_API_URL = process.env.PEXELS_API_URL || "https://api.pexels.com/v1/search"
 const PEXELS_API_KEY = process.env.PEXELS_API_KEY
@@ -23,47 +24,14 @@ const categoryMap: Record<string, CategoryType> = {
   "progress tracking": "progresstracking",
 }
 
-export const fetchAndStoreImages = async (): Promise<void> => {
-  if (isReady) return
-  try {
-    if (!PEXELS_API_KEY) {
-      console.error("Pexels API key not found!")
-      return
-    }
-
-    await connectDB()
-    await Image.deleteMany({})
-
-    for (const [pexelsQuery, appCategory] of Object.entries(categoryMap)) {
-      const response = await axios.get(PEXELS_API_URL, {
-        headers: { Authorization: PEXELS_API_KEY },
-        params: {
-          query: pexelsQuery,
-          per_page: PER_PAGE,
-          page: PAGE,
-        },
-      })
-
-      const images = response.data.photos.map((img: any) => ({
-        ...img,
-        category: appCategory,
-      }))
-
-      await Image.insertMany(images)
-    }
-
-    console.log("Images saved to DB with categories.")
-    isReady = true
-  } catch (error) {
-    console.error("Error fetching and storing images:", error)
-  }
+export const getImages = async (): Promise<any[] | undefined> => {
+  return imageList
 }
+
 
 export const getImagesFromDB = async () => {
   try {
-    await connectDB()
-    const images = await Image.find()
-    return images.length > 0 ? images : null
+    return await getImages()
   } catch (error) {
     console.error("Error fetching images from DB:", error)
     throw new Error("Failed to retrieve images")
@@ -72,10 +40,11 @@ export const getImagesFromDB = async () => {
 
 export const getImageByCategory = async (category: CategoryType) => {
   try {
-    await connectDB()
-    const images = await Image.aggregate([{ $match: { category: category.toLowerCase() } }, { $sample: { size: 1 } }])
+    const images = await getImages()
 
-    return images[0] || null
+    const filteredImage = images?.find((image) => image.category.localeCompare(category, "en", { ignoreCase: true, sensitivity: "base" }) === 0)
+
+    return filteredImage || null
   } catch (error) {
     console.error("Error fetching image by category:", error)
     return null
