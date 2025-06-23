@@ -1,0 +1,87 @@
+.loginContainer {
+  min-height: 100vh;
+  background: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.loginFormWrapper {
+  background: #111;
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.loginTitle {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.loginSubtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+.freeTrialLink {
+  color: #e50914;
+  text-decoration: underline;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginForm label {
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.loginForm input {
+  margin-bottom: 1.2rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: none;
+  background: #222;
+  color: #fff;
+}
+
+.formOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.rememberMe input {
+  margin-right: 0.4rem;
+}
+
+.forgotLink {
+  color: #e50914;
+  font-size: 0.85rem;
+  text-decoration: underline;
+}
+
+.loginButton {
+  background: #e50914;
+  padding: 0.9rem;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.loginButton:hover {
+  background: #c40812;
+}

@@ -1,0 +1,17 @@
+.optionsSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  gap: 2rem;
+  height: 100vh;
+  background-color: #4a6077;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .optionsSection {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+}

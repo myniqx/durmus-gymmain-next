@@ -1,0 +1,78 @@
+.methodContainer {
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #333;
+  color: white;
+  min-height: 100vh;
+}
+
+.methodTitle {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #f4f4f4;
+}
+
+.methodSteps {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.methodStep {
+  background: rgba(246, 246, 248, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  flex: 1;
+  min-width: 250px;
+  max-width: 320px;
+  text-align: center;
+}
+
+.methodStep h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.methodStep p {
+  font-size: 16px;
+  color: #ddd;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.stepImage {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1200px) {
+  .methodSteps {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .methodStep {
+    flex: 0 1 calc(33.333% - 15px);
+  }
+}
+
+@media (max-width: 900px) {
+  .methodStep {
+    flex: 0 1 calc(50% - 15px);
+  }
+}
+
+@media (max-width: 600px) {
+  .methodStep {
+    flex: 0 1 100%;
+  }
+}

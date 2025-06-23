@@ -1,0 +1,32 @@
+{
+  "yogaPage": {
+    "title": "Experience the Benefits of Yoga",
+    "subtitle": "Strengthen your body, relax your mind",
+    "description": "Join our yoga sessions guided by experts to improve your flexibility, balance, and inner peace.",
+    "description2": "Suitable for all levels, from beginners to advanced.",
+    "description3": "Reduce stress, increase mindfulness, and build strength with our guided classes.",
+    "freeTrialText": "Try a free class"
+  },
+  "footer": {
+    "location": "Location",
+    "addressLine1": "Moregrebstraat 56",
+    "addressLine2": "Bergen op Zoom, 4622JD",
+    "socials": "Social Media",
+    "contact": "Contact",
+    "email": "info@durmusgym.nl",
+    "phone": "+31 6 33820475",
+    "gymName": "DurmusGym",
+    "chamberOfCommerce": "Chamber of Commerce No: 1111111"
+  },
+  "navbar": {
+    "personalTraining": "Personal Training",
+    "pilates": "Pilates",
+    "diet": "Diet",
+    "about": "About Us",
+    "method": "Method",
+    "contact": "Contact",
+    "freeTrial": "Free Trial",
+    "yoga": "Yoga",
+    "login": "Login"
+  }
+}

@@ -1,0 +1,102 @@
+.optionCard {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  max-width: 350px;
+  margin: 10px auto;
+  width: 30%;
+}
+
+.optionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.optionCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.description {
+  text-align: left;
+  font-size: 1rem;
+  color: white;
+}
+
+.description ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.description li {
+  font-size: 1rem;
+  padding: 8px 0;
+  padding-left: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.description li::before {
+  content: "✔";
+  color: #00ff99;
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+.description li:last-child {
+  border-bottom: none;
+}
+
+.btnMoreInfo {
+  display: inline-block;
+  background: white;
+  color: #ff4f79;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 12px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btnMoreInfo:hover {
+  background: #ff4f79;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .optionCard {
+    max-width: 100%;
+    padding: 16px;
+    width: 100%;
+  }
+
+  .optionCard h3 {
+    font-size: 1.3rem;
+  }
+
+  .description li {
+    font-size: 0.95rem;
+    padding-left: 26px;
+  }
+
+  .description li::before {
+    font-size: 1rem;
+    left: 3px;
+  }
+
+  .btnMoreInfo {
+    padding: 8px 14px;
+  }
+}

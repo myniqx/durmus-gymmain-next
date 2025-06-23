@@ -1,0 +1,32 @@
+{
+  "yogaPage": {
+    "title": "Yoga'nın Faydalarını Deneyimleyin",
+    "subtitle": "Vücudunuzu güçlendirin, zihninizi rahatlatın",
+    "description": "Uzmanlar eşliğinde yoga seanslarımıza katılın, esnekliğinizi, dengenizi ve iç huzurunuzu geliştirin.",
+    "description2": "Başlangıç seviyesinden ileri düzeye kadar herkese uygundur.",
+    "description3": "Stresi azaltın, farkındalığınızı artırın ve rehberli derslerimizle güç kazanın.",
+    "freeTrialText": "Ücretsiz deneme dersi deneyin"
+  },
+  "footer": {
+    "location": "Konum",
+    "addressLine1": "Moregrebstraat 56",
+    "addressLine2": "Bergen op Zoom, 4622JD",
+    "socials": "Sosyal Medya",
+    "contact": "İletişim",
+    "email": "info@durmusgym.nl",
+    "phone": "+31 6 33820475",
+    "gymName": "DurmusGym",
+    "chamberOfCommerce": "Ticaret Odası No: 1111111"
+  },
+  "navbar": {
+    "personalTraining": "Kişisel Antrenman",
+    "pilates": "Pilates",
+    "diet": "Diyet",
+    "about": "Hakkımızda",
+    "method": "Yöntem",
+    "contact": "İletişim",
+    "freeTrial": "Ücretsiz Deneme",
+    "yoga": "Yoga",
+    "login": "Giriş"
+  }
+}

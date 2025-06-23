@@ -1,0 +1,38 @@
+.heroHighlights {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.highlightItem {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  width: 250px;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.highlightItem:hover {
+  transform: translateY(-5px);
+}
+
+.highlightIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1fd312;
+}
+
+.highlightItem h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.highlightItem p {
+  font-size: 1rem;
+  line-height: 1.4;
+}

@@ -1,0 +1,62 @@
+.footerContainer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footerSection {
+  text-align: center;
+}
+
+.footerSection h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footerIcons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.socialIcon {
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+.footerCopyright {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.footerCentered {
+  display: flex;
+  justify-content: center;
+  gap: 180px;
+  flex-wrap: wrap;
+}
+
+.footerSection {
+  text-align: center;
+  padding: 10px;
+}
+
+.instagram {
+  color: #e4405f;
+}
+
+.whatsapp {
+  color: #25d366;
+}
